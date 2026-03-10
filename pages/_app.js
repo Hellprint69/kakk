@@ -1,28 +1,29 @@
 import Script from 'next/script'
+import Head from 'next/head'
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* 1. PRIORITAS UTAMA: Histats (Agar tercatat sebelum iklan jalan) */}
-      <Script 
-        id="histats-script" 
-        strategy="beforeInteractive" // KITA PAKAI STRATEGI TERCEPAT
-        dangerouslySetInnerHTML={{
-          __html: `
-            var _Hasync= _Hasync|| [];
-            _Hasync.push(['Histats.start', '1,5013673,4,0,0,0,00010000']);
-            _Hasync.push(['Histats.fasi', '1']);
-            _Hasync.push(['Histats.track_hits', '']);
-            (function() {
-              var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-              hs.src = ('//s10.histats.com/js15_as.js');
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-            })();
-          `,
-        }}
-      />
-      
-      {/* 2. Komponen Web Kamu */}
+      <Head>
+        {/* PAKSA HISTATS JALAN DI DALAM HEAD (Paling Pertama) */}
+        <script 
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _Hasync= _Hasync|| [];
+              _Hasync.push(['Histats.start', '1,5013673,4,0,0,0,00010000']);
+              _Hasync.push(['Histats.fasi', '1']);
+              _Hasync.push(['Histats.track_hits', '']);
+              (function() {
+                var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+                hs.src = ('//s10.histats.com/js15_as.js');
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+              })();
+            `
+          }}
+        />
+      </Head>
+
       <Component {...pageProps} />
     </>
   )

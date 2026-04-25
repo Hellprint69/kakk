@@ -40,7 +40,7 @@ export default function Player() {
 
   const handleDownload = () => {
     let currentStep = parseInt(localStorage.getItem('download_step') || '0');
-    const linkAdstera = 'https://www.effectivegatecpm.com/u88ksn21bi?key=466e5edc4b150634636ec85f6be789c3';
+    const linkAdstera = 'https://www.profitablecpmratenetwork.com/d7jqq83bzz?key=3e70f1829bb22d82a236dec89e9e90c3';
     const affiliateLinks = ['https://s.shopee.co.id/7fUZHYXISz', 'https://s.shopee.co.id/AUokejQPcI'];
 
     currentStep++;
@@ -74,7 +74,7 @@ export default function Player() {
         }
       `}</style>
 
-      <Script src="https://pl28763278.effectivegatecpm.com/ee/04/09/ee040951564d0118f9c97849ba692abb.js" strategy="afterInteractive" />
+      <Script src="https://pl29246262.profitablecpmratenetwork.com/9a/2d/43/9a2d43faba1e26603a0fca9713599fc6.js" strategy="afterInteractive" />
 
       {adBlockDetected && (
         <div style={{

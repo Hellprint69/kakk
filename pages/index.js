@@ -114,7 +114,7 @@ export default function Home({ initialVideos }) {
         </div>
 
         {/* IKLAN ADSTERRA */}
-        <Script src="https://pl28763278.effectivegatecpm.com/ee/04/09/ee040951564d0118f9c97849ba692abb.js" strategy="afterInteractive" />
+        <Script src="https://pl29246262.profitablecpmratenetwork.com/9a/2d/43/9a2d43faba1e26603a0fca9713599fc6.js" strategy="afterInteractive" />
 
         {/* TAB FILTER */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
